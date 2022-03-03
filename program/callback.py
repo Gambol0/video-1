@@ -110,23 +110,24 @@ async def cbbasic(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""🏮 here is the basic commands:
 
-» شغل او تشغيل (song name/link) - play music on video chat
-» فيديو (video name/link) - play video on video chat
-» لايف - play live video from yt live/m3u8
-» /lyric (query) - scrap the song lyric
+» شغل او تشغيل (song name/link) - لتشغيل الاغاني
+» فيديو (video name/link) - لتشغيل الفيديوهات
+» لايف - لتشغيل بث مباشر
+» كلمات (query) - للعثور علي كلمات اغنيه
 » /search (query) - search a youtube video link
-» /song (query) - download song from youtube
+» اغنيه (query) - لتنزيل اغنيه من اليوتيوب
+» اغنيه (query) - لتنزيل فيديو من اليوتيوب
 » /lyric (query) - scrap the song lyric
 » /search (query) - search a youtube video link
 
-» /ping - show the bot ping status
+» بنك - لعرض حاله البوت
 » /speedtest - run the bot server speedtest
 » /uptime - show the bot uptime status
 » /alive - show the bot alive info (in group)
 
 ⚡️ __Powered by {BOT_NAME} AI__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🔙 Go Back", callback_data="cbcmds")]]
+            [[InlineKeyboardButton("🔙 رجوع", callback_data="cbcmds")]]
         ),
     )
 
