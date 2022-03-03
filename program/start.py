@@ -49,7 +49,7 @@ async def _human_time_duration(seconds):
 
 
 @Client.on_message(
-    command(["تشغيل", f"start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
+    command(["الاوامر", f"start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
@@ -83,7 +83,7 @@ async def start_(client: Client, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "مبرمج السورس 🇪🇬", url="https://t.me/Q_X_I_T"
+                        "مبرمج السورس 🇪🇬", url="https://t.me/G8_M_L"
                     )
                 ],
             ]
@@ -112,7 +112,7 @@ async def alive(c: Client, message: Message):
         ]
     )
 
-    alive = f"**Hello {message.from_user.mention()}, i'm {BOT_NAME}**\n\n🧑🏼‍💻 My Master: [{ALIVE_NAME}](https://t.me/{OWNER_NAME})\n👾 Bot Version: `v{__version__}`\n🔥 Pyrogram Version: `{pyrover}`\n🐍 Python Version: `{__python_version__}`\n✨ PyTgCalls Version: `{pytover.__version__}`\n🆙 Uptime Status: `{uptime}`\n\n❤ **Thanks for Adding me here, for playing video & music on your Group's video chat**"
+    alive = f"**مرحبا عزيزي {message.from_user.mention()}, في بوت {BOT_NAME}**\n\n🧑🏼‍💻المبرمج: [{ALIVE_NAME}](https://t.me/{OWNER_NAME})\n🆙 وقت التشغيل: `{uptime}`\n\n❤ **شكرا لاضافتي هنا, يمكنك تشغيل الفيديو  & الاغاني في مجموعتك من خلال اوامر البوت**"
 
     await c.send_photo(
         chat_id,
@@ -127,7 +127,7 @@ async def ping_pong(client: Client, message: Message):
     start = time()
     m_reply = await message.reply_text("pinging...")
     delta_ping = time() - start
-    await m_reply.edit_text("🏓 `PONG!!`\n" f"⚡️ `{delta_ping * 1000:.3f} ms`")
+    await m_reply.edit_text("🏓 `بنج!!`\n" f"⚡️ `{delta_ping * 1000:.3f} ms`")
 
 
 @Client.on_message(command(["وقت التشغيل", f"uptime@{BOT_USERNAME}"]) & ~filters.edited)
