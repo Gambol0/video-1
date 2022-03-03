@@ -47,7 +47,7 @@ async def cbstart(_, query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton(
-                        "🌐 مبرمج السورس", url="https://t.me/Q_X_I_T"
+                        "🌐 مبرمج السورس", url="https://t.me/G8_M_L"
                     )
                 ],
             ]
@@ -179,23 +179,23 @@ async def cbsudo(_, query: CallbackQuery):
 async def cbmenu(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("💡 Only admin with manage video chat permission that can tap this button !", show_alert=True)
+        return await query.answer("💡 فقط الادمن من يستطيع التحكم بالازرار !", show_alert=True)
     chat_id = query.message.chat.id
     user_id = query.message.from_user.id
     buttons = menu_markup(user_id)
     chat = query.message.chat.title
     if chat_id in QUEUE:
           await query.edit_message_text(
-              f"⚙️ **Settings of** {chat}\n\n⏸ : pause stream\n▶️ : resume stream\n🔇 : mute userbot\n🔊 : unmute userbot\n⏹ : stop stream",
+              f"⚙️ **الاعدادات** {chat}\n\n⏸ : توقف التشغيل\n▶️ : استمرار التشغيل\n🔇 : كتم التشغيل\n🔊 : الغاء كتم التشغيل\n⏹ : انهاء التشغيل",
               reply_markup=InlineKeyboardMarkup(buttons),
           )
     else:
-        await query.answer("❌ nothing is currently streaming", show_alert=True)
+        await query.answer("❌ ليس هناك تشغيل حالي ", show_alert=True)
 
 
 @Client.on_callback_query(filters.regex("cls"))
 async def close(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("💡 Only admin with manage video chat permission that can tap this button !", show_alert=True)
+        return await query.answer("💡 فقط الادمن من يستطيع التحكم بالازرار !", show_alert=True)
     await query.message.delete()
