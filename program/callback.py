@@ -110,7 +110,7 @@ async def cbbasic(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""🏮 here is the basic commands:
 
-» شغل (song name/link) - play music on video chat
+» شغل او تشغيل (song name/link) - play music on video chat
 » فيديو (video name/link) - play video on video chat
 » لايف - play live video from yt live/m3u8
 » /lyric (query) - scrap the song lyric
